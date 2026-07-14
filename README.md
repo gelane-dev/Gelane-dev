@@ -1,7 +1,7 @@
-<h1 align="center">Olá, eu sou o Leonardo Gelane 👋</h1>
+<h1 align="center">HELLO WORLD, eu sou o Leonardo Gelane 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Estudante+de+ADS+%F0%9F%92%BB;Futuro+Full+Stack+Developer+%F0%9F%9A%80;Apaixonado+por+Intelig%C3%AAncia+Artificial+%F0%9F%A4%96&center=true&width=500&height=45&color=2E9EF7&size=22" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?lines=Estudante+de+ADS+%F0%9F%92%BB;Futuro+Full+Stack+Developer+%F0%9F%9A%80;%F0%9F%A4%96&center=true&width=500&height=45&color=2E9EF7&size=22" />
 </p>
 
 <p align="center">
@@ -20,10 +20,11 @@ Sou do Rio de Janeiro/RJ e tenho grande interesse por tecnologia. Estou cursando
 
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
   <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />
 </p>
 
@@ -34,9 +35,6 @@ Sou do Rio de Janeiro/RJ e tenho grande interesse por tecnologia. Estou cursando
 #### 🔹 [projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)
 Sistema de cadastro de clientes — base do meu CRUD com **Python + Flask + SQLite**, em desenvolvimento.
 
-#### 🔹 Doce Nirvana
-Site de vendas desenvolvido com **HTML, CSS e JavaScript**, focado em apresentar produtos de forma atrativa e responsiva, simulando um e-commerce real. *(em breve no perfil)*
-
 #### 🔹 [Validador-de-CPF](https://github.com/gelane-dev/Validador-de-CPF)
 Validador de CPF em **Python**, que verifica a autenticidade do número pelo algoritmo oficial de dígitos verificadores.
 
@@ -44,13 +42,7 @@ Validador de CPF em **Python**, que verifica a autenticidade do número pelo alg
 Gerador de CPF válido em **Python**, criando números matematicamente corretos para fins de estudo e testes.
 
 #### 🔹 [carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)
-Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HTML**.
-
-#### 🔹 [projeto-fitness](https://github.com/gelane-dev/projeto-fitness)
-Página web com foco em saúde e treino, desenvolvida em **HTML**.
-
-#### 🔹 [meu-primeiro-site](https://github.com/gelane-dev/meu-primeiro-site)
-Meu primeiro projeto público, desenvolvido em **HTML**.
+Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HTML,CSS E JAVASCRIPT**.
 
 ---
 
@@ -70,9 +62,8 @@ Meu primeiro projeto público, desenvolvido em **HTML**.
 ### 🎯 Próximos passos
 
 - [ ] Finalizar o CRUD com Flask (`projeto_cadastro_cliente`)
-- [ ] Publicar o site Doce Nirvana
-- [ ] Aprofundar em **APIs REST com Flask**
-- [ ] Estudar um **framework front-end** (React ou Vue)
+- [ ] Aprofundar em **APIs REST com Flask/Django**
+- [ ] Aprofundar meus estudos no  **BACKEND** (python,java)
 - [ ] Introdução prática a **Machine Learning**
 
 ---
