@@ -1,10 +1,6 @@
 <h1 align="center">HELLO WORLD, eu sou o Leonardo Gelane 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Estudante+de+ADS+%F0%9F%92%BB;Futuro+Full+Stack+Developer+%F0%9F%9A%80;%F0%9F%A4%96&center=true&width=500&height=45&color=2E9EF7&size=22" />
-</p>
-
-<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9EF7,100:6DD5FA&height=180&section=header&text=Seja%20bem-vindo(a)!&fontSize=35&fontColor=ffffff&animation=fadeIn" />
 </p>
 
