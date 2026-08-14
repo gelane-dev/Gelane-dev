@@ -1,4 +1,4 @@
-<h1 align="center">HELLO WORLD, eu sou o Leonardo Gelane 👋</h1>
+<h1 align="center">HELLO WORLD, eu sou o Leonardo 👋</h1>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9EF7,100:6DD5FA&height=180&section=header&text=Seja%20bem-vindo(a)!&fontSize=35&fontColor=ffffff&animation=fadeIn" />
