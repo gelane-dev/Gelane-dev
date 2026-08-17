@@ -28,6 +28,9 @@ Sou do Rio de Janeiro/RJ e tenho grande interesse por tecnologia. Estou cursando
 
 ### 📂 Projetos em destaque
 
+#### 🔹 [product-api-fastapi](https://github.com/gelane-dev/product-api-fastapi)
+API de e-commerce com **FastAPI + PostgreSQL + SQLAlchemy**, com autenticação JWT, controle de acesso admin/cliente e pedidos com regras de negócio (estoque, status).
+
 #### 🔹 [projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)
 Sistema de cadastro de clientes — base do meu CRUD com **Python + Flask + SQLite**, em desenvolvimento.
 
