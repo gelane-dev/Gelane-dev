@@ -33,11 +33,8 @@ API de e-commerce com **FastAPI + PostgreSQL + SQLAlchemy**, com autenticação 
 #### 🔹 [projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)
 Sistema de cadastro de clientes — base do meu CRUD com **Python + Flask + SQLite**, em desenvolvimento.
 
-#### 🔹 [Validador-de-CPF](https://github.com/gelane-dev/Validador-de-CPF)
-Validador de CPF em **Python**, que verifica a autenticidade do número pelo algoritmo oficial de dígitos verificadores.
-
-#### 🔹 [Gerador-de-cpf](https://github.com/gelane-dev/Gerador-de-cpf)
-Gerador de CPF válido em **Python**, criando números matematicamente corretos para fins de estudo e testes.
+#### 🔹 [facial-recognition](https://github.com/gelane-dev/facial-recognition)
+Sistema de portaria com reconhecimento facial usando **Python, OpenCV, DeepFace e SQLite**, com cadastro de pessoas, comparação de embeddings em tempo real e log de acessos com foto — em desenvolvimento.
 
 #### 🔹 [carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)
 Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HTML,CSS E JAVASCRIPT**.
