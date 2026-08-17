@@ -7,10 +7,9 @@
 ---
 
 ### 🚀 Sobre mim
+Sou um desenvolvedor full stack de 23 anos, construindo aplicações reais com **Python, Django, Flask, JavaScript, HTML e CSS**. Aprendo na prática: erro, ajusto, refaço — e é nesse ciclo que realmente entendo o que estou construindo. Combino domínio técnico com atenção ao detalhe pra entregar código funcional e bem estruturado. Minha jornada começou pelo frontend, mas logo me apaixonei pela integração entre frontend e backend — o que me fez seguir estudando desenvolvimento web de ponta a ponta. Hoje estou em busca da minha primeira oportunidade como estagiário/junior, com o objetivo de me tornar um **desenvolvedor Full Stack** completo.
 
-Sou do Rio de Janeiro/RJ e tenho grande interesse por tecnologia. Estou cursando **Análise e Desenvolvimento de Sistemas** e venho desenvolvendo projetos com **Python, JavaScript, HTML e CSS**, explorando diferentes áreas da programação. Atualmente busco minha primeira oportunidade como estagiário e sigo com o objetivo de me tornar um **desenvolvedor Full Stack**, com foco futuro em **Inteligência Artificial**.
-
----
+📫 Aberto a trocar ideia, dar e receber feedback sobre código, e aprender junto.
 
 ### 🛠️ Tecnologias que estou estudando
 
@@ -55,15 +54,6 @@ Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HT
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=gelane-dev&theme=tokyonight&hide_border=true" width="60%" />
 </p>
-
----
-
-### 🎯 Próximos passos
-
-- [ ] Finalizar o CRUD com Flask (`projeto_cadastro_cliente`)
-- [ ] Aprofundar em **APIs REST com Flask/Django**
-- [ ] Aprofundar meus estudos no  **BACKEND** (python,java)
-- [ ] Introdução prática a **Machine Learning**
 
 ---
 
