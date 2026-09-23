@@ -27,6 +27,9 @@ Sou um desenvolvedor full stack de 23 anos, construindo aplicações reais com *
 
 ### 📂 Projetos em destaque
 
+#### 🔹 [FitFlow — Gestão de Treinos](https://github.com/gelane-dev/app-academia)
+Sistema desenvolvido com **FastAPI, PostgreSQL e React Native (Expo)**, permitindo que professores criem e gerenciem fichas de treino, organizem a periodização e acompanhem a execução dos alunos, enquanto os alunos acessam seus treinos, registram suas atividades e acompanham sua evolução.
+
 #### 🔹 [product-api-fastapi](https://github.com/gelane-dev/product-api-fastapi)
 API de e-commerce com **FastAPI + PostgreSQL + SQLAlchemy**, com autenticação JWT, controle de acesso admin/cliente e pedidos com regras de negócio (estoque, status).
 
@@ -39,6 +42,7 @@ Sistema de portaria com reconhecimento facial usando **Python, OpenCV, DeepFace 
 #### 🔹 [carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)
 Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HTML,CSS E JAVASCRIPT**.
 
+https://github.com/gelane-dev/app-academia
 ---
 
 ### 📊 Estatísticas do GitHub
