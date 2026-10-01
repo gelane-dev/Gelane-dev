@@ -42,7 +42,6 @@ Sistema de portaria com reconhecimento facial usando **Python, OpenCV, DeepFace 
 #### 🔹 [carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)
 Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HTML,CSS E JAVASCRIPT**.
 
-https://github.com/gelane-dev/app-academia
 ---
 
 ### 📊 Estatísticas do GitHub
