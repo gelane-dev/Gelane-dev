@@ -7,9 +7,15 @@
 ---
 
 ### 🚀 Sobre mim
-Sou um desenvolvedor full stack de 23 anos, construindo aplicações reais com **Python, Django, Flask, JavaScript, HTML e CSS**. Aprendo na prática: erro, ajusto, refaço — e é nesse ciclo que realmente entendo o que estou construindo. Combino domínio técnico com atenção ao detalhe pra entregar código funcional e bem estruturado. Minha jornada começou pelo frontend, mas logo me apaixonei pela integração entre frontend e backend — o que me fez seguir estudando desenvolvimento web de ponta a ponta. Hoje estou em busca da minha primeira oportunidade como estagiário/junior, com o objetivo de me tornar um **desenvolvedor Full Stack** completo.
+Sou estudante de **Análise e Desenvolvimento de Sistemas** e venho aprendendo desenvolvimento na prática, criando projetos e resolvendo problemas ao longo do caminho.
 
-📫 Aberto a trocar ideia, dar e receber feedback sobre código, e aprender junto.
+Tenho trabalhado principalmente com **Python e desenvolvimento backend**, usando FastAPI, Flask, Django e SQLAlchemy, além de PostgreSQL e SQLite. Também desenvolvo interfaces web com HTML, CSS e JavaScript e aplicações mobile com React Native e Expo.
+
+Meus projetos envolvem APIs REST, autenticação, controle de acesso, operações com banco de dados e integração entre aplicações. Também utilizo Git, GitHub e Docker nos meus estudos e projetos.
+
+Estou buscando minha primeira oportunidade na área de desenvolvimento, com interesse em backend e Full Stack. Quero continuar evoluindo, aprender com outros desenvolvedores e participar da construção de aplicações que resolvam problemas reais.
+
+📫 Gosto de trocar ideias sobre tecnologia, compartilhar aprendizados e receber feedback sobre meus projetos.
 
 ### 🛠️ Tecnologias
 
