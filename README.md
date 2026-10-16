@@ -59,20 +59,20 @@ Estou buscando minha primeira oportunidade na área de desenvolvimento, com inte
 
 ### 📂 Projetos em destaque
 
-#### 🔹 [FitFlow — Gestão de Treinos](https://github.com/gelane-dev/app-academia)
-Sistema desenvolvido com **FastAPI, PostgreSQL e React Native (Expo)**, permitindo que professores criem e gerenciem fichas de treino, organizem a periodização e acompanhem a execução dos alunos, enquanto os alunos acessam seus treinos, registram suas atividades e acompanham sua evolução.
+#### 🛒 [E-commerce Full Stack](https://github.com/gelane-dev/product-api-fastapi)
+Aplicação em desenvolvimento com **Python, FastAPI, PostgreSQL, SQLAlchemy e React**. O backend inclui autenticação JWT, permissões por perfil, gerenciamento de produtos e pedidos com regras de estoque. O frontend está em fase inicial.
 
-#### 🔹 [product-api-fastapi](https://github.com/gelane-dev/product-api-fastapi)
-API de e-commerce com **FastAPI + PostgreSQL + SQLAlchemy**, com autenticação JWT, controle de acesso admin/cliente e pedidos com regras de negócio (estoque, status).
+#### 💪 [FitFlow — Gestão de Treinos](https://github.com/gelane-dev/FitFlow)
+Aplicação de acompanhamento de treinos com **FastAPI, PostgreSQL e React Native (Expo)**, desenvolvida para praticar APIs, persistência de dados e integração com uma interface mobile.
 
 #### 🔹 [projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)
-Sistema de cadastro de clientes — base do meu CRUD com **Python + Flask + SQLite**, em desenvolvimento.
+Sistema de cadastro de clientes desenvolvido com **Python, Flask e SQLite**, em evolução como projeto de prática de CRUD.
 
 #### 🔹 [facial-recognition](https://github.com/gelane-dev/facial-recognition)
-Sistema de portaria com reconhecimento facial usando **Python, OpenCV, DeepFace e SQLite**, com cadastro de pessoas, comparação de embeddings em tempo real e log de acessos com foto — em desenvolvimento.
+Projeto de reconhecimento facial com **Python, OpenCV, DeepFace e SQLite**, em desenvolvimento.
 
 #### 🔹 [carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)
-Projeto de carrinho de compras desenvolvido durante a faculdade de ADS, com **HTML,CSS E JAVASCRIPT**.
+Projeto de carrinho de compras criado durante a faculdade de ADS, utilizando **HTML, CSS e JavaScript**.
 
 ---
 
