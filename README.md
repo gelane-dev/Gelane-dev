@@ -59,10 +59,10 @@ Estou buscando minha primeira oportunidade na área de desenvolvimento, com inte
 
 ### Projetos em destaque
 
-#### 🛒 [E-commerce Full Stack](https://github.com/gelane-dev/ecommerce-fullstack)
+#### 🔹 [E-commerce Full Stack](https://github.com/gelane-dev/ecommerce-fullstack)
 Aplicação em desenvolvimento com **Python, FastAPI, PostgreSQL, SQLAlchemy e React**. O backend inclui autenticação JWT, permissões por perfil, gerenciamento de produtos e pedidos com regras de estoque. O frontend está em fase inicial.
 
-#### 💪 [FitFlow — Gestão de Treinos](https://github.com/gelane-dev/FitFlow)
+#### 🔹 [FitFlow — Gestão de Treinos](https://github.com/gelane-dev/FitFlow)
 Aplicação de acompanhamento de treinos com **FastAPI, PostgreSQL e React Native (Expo)**, desenvolvida para praticar APIs, persistência de dados e integração com uma interface mobile.
 
 #### 🔹 [projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)
