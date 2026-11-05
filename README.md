@@ -59,6 +59,10 @@ Estou buscando minha primeira oportunidade na área de desenvolvimento, com inte
 
 ### Projetos em destaque
 
+
+#### 🔹 [Empório da Música — AI Assistant](https://github.com/gelane-dev/emporio-da-musica-agent)
+Aplicação full stack com **Python, FastAPI, React e Inteligência Artificial**. Integra a assistente virtual Mel, desenvolvida com arquitetura de agentes e *Function Calling*, capaz de responder dúvidas sobre produtos, consultar informações do catálogo e aplicar regras de negócio. O projeto inclui integração com LLMs, APIs REST, testes automatizados e interface web interativa.
+
 #### 🔹 [E-commerce Full Stack](https://github.com/gelane-dev/ecommerce-fullstack)
 Aplicação em desenvolvimento com **Python, FastAPI, PostgreSQL, SQLAlchemy e React**. O backend inclui autenticação JWT, permissões por perfil, gerenciamento de produtos e pedidos com regras de estoque. O frontend está em fase inicial.
 
