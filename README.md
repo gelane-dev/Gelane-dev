@@ -19,57 +19,6 @@
 
 ---
 
-### 🚀 Sobre mim
-Sou estudante de **Análise e Desenvolvimento de Sistemas** e venho aprendendo desenvolvimento na prática, criando projetos e resolvendo problemas ao longo do caminho.
-
-Tenho trabalhado principalmente com **Python e desenvolvimento backend**, usando FastAPI, Flask, Django e SQLAlchemy, além de PostgreSQL e SQLite. Também desenvolvo interfaces web com HTML, CSS e JavaScript e aplicações mobile com React Native e Expo.
-
-Meus projetos envolvem APIs REST, autenticação, controle de acesso, operações com banco de dados e integração entre aplicações. Também utilizo Git, GitHub e Docker nos meus estudos e projetos.
-
-Estou buscando minha primeira oportunidade na área de desenvolvimento, com interesse em backend e Full Stack. Quero continuar evoluindo, aprender com outros desenvolvedores e participar da construção de aplicações que resolvam problemas reais.
-
-📫 Gosto de trocar ideias sobre tecnologia, compartilhar aprendizados e receber feedback sobre meus projetos.
-
-### 🛠️ Tecnologias
-
-**Backend**
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white" />
-</p>
-
-**Banco de Dados**
-
-<p align="left">
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Alembic-6BA81E?style=for-the-badge&logo=alembic&logoColor=white" />
-</p>
-
-**Frontend & Mobile**
-
-<p align="left">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" />
-</p>
-
-**Ferramentas**
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-</p>
-
----
-
 ### 🗂️ Projetos em destaque
 
 | Endpoint | Projeto | Stack |
@@ -96,5 +45,3 @@ Estou buscando minha primeira oportunidade na área de desenvolvimento, com inte
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
-
-<sub>Os SVGs deste perfil são gerados por <a href="./scripts/generate.py"><code>scripts/generate.py</code></a> e atualizados todo dia por um GitHub Action.</sub>
