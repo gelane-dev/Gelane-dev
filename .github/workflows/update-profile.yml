@@ -21,6 +21,8 @@ jobs:
           python-version: "3.12"
       - run: pip install pillow
       - run: python scripts/generate.py
+        env:
+          PROFILE_EMAIL: ${{ vars.PROFILE_EMAIL }}
       - name: Commit se mudou
         run: |
           git config user.name "github-actions[bot]"
