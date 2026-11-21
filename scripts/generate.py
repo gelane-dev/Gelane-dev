@@ -295,12 +295,17 @@ IG_GRADIENT = ('<defs><radialGradient id="ig" cx="30%" cy="107%" r="150%">'
 def icon_svg(name: str, color: str) -> str:
     """Logo da marca; no portfólio, o avatar em pixel art (assets/eu_2d.png) recortado em círculo."""
     if name == "portfolio":
-        data = base64.b64encode((OUT / "eu_2d.png").read_bytes()).decode()
+        # recorta só a cabeça (a imagem original tem muito fundo e o pescoço/ombros)
+        face = Image.open(OUT / "eu_2d.png").convert("RGB").crop((14, 6, 82, 74))
+        buf = io.BytesIO()
+        face.save(buf, "PNG", optimize=True)
+        data = base64.b64encode(buf.getvalue()).decode()
         return (
-            '<defs><clipPath id="me"><circle cx="26" cy="27" r="12"/></clipPath></defs>'
-            f'<image x="14" y="15" width="24" height="24" clip-path="url(#me)" style="image-rendering:pixelated" '
+            '<defs><clipPath id="me"><circle cx="26" cy="27" r="11"/></clipPath></defs>'
+            f'<circle cx="26" cy="27" r="11.5" fill="#2a2a30"/>'
+            f'<image x="15" y="16" width="22" height="22" clip-path="url(#me)" style="image-rendering:pixelated" '
             f'href="data:image/png;base64,{data}"/>'
-            f'<circle cx="26" cy="27" r="12" fill="none" stroke="{color}" stroke-width="1.5"/>'
+            f'<circle cx="26" cy="27" r="11.5" fill="none" stroke="{color}" stroke-width="1"/>'
         )
     fill, d = ICONS[name]
     grad = IG_GRADIENT if name == "instagram" else ""
