@@ -219,6 +219,7 @@ NEOFETCH = [
         "Ex-soldado do Exército Brasileiro (logística)",
     ]),
     ("Links", [
+        ("Portfólio", "gelane-dev.vercel.app"),
         ("GitHub", "gelane-dev"),
         ("LinkedIn", "in/leonardo-gelane-222973258"),
         ("Instagram", "leonardo.gelane"),
@@ -228,7 +229,7 @@ NEOFETCH = [
 
 def neofetch(height: int) -> str:
     width, x0, xv = 420, 22, 118
-    lh, fs = 17.5, 12
+    lh, fs = 15.5, 12
     parts, i = [], 0
     y = 58
 
