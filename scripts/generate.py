@@ -278,15 +278,29 @@ BUTTONS = [
 ]
 
 
-def button(label: str, sub: str, color: str) -> str:
+# Ícones em traço (caixa 20x20), desenhados à mão para combinar com o visual
+ICONS = {
+    "portfolio": '<circle cx="10" cy="10" r="8.5"/><ellipse cx="10" cy="10" rx="3.8" ry="8.5"/>'
+                 '<path d="M1.5 10h17M3 5.5h14M3 14.5h14"/>',
+    "linkedin": '<rect x="1.5" y="1.5" width="17" height="17" rx="3.5"/>'
+                '<path d="M6.2 9v5.5M10 14.5V9M10 11.6a2.5 2.5 0 0 1 5 0v2.9"/>'
+                '<circle cx="6.2" cy="6" r="1" fill="currentColor" stroke="none"/>',
+    "instagram": '<rect x="1.5" y="1.5" width="17" height="17" rx="5"/><circle cx="10" cy="10" r="4"/>'
+                 '<circle cx="14.8" cy="5.2" r="1" fill="currentColor" stroke="none"/>',
+    "email": '<rect x="1.5" y="3.5" width="17" height="13" rx="2.5"/><path d="M2.5 5l7.5 6 7.5-6"/>',
+}
+
+
+def button(name: str, label: str, sub: str, color: str) -> str:
     w, h = 200, 54
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">
 <style>text{{font-family:{FONT}}}</style>
 <rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="9" fill="{PANEL}" stroke="{BORDER}"/>
 <rect x="0.5" y="12" width="3" height="{h-24}" rx="1.5" fill="{color}"/>
-<text x="16" y="23" font-size="12.5" font-weight="700"><tspan fill="{MUTED}">$ open </tspan><tspan fill="{INK}">{esc(label)}</tspan></text>
-<text x="16" y="40" font-size="10.5" fill="{color}">{esc(sub)}</text>
-<text x="{w-16}" y="23" font-size="13" fill="{MUTED}" text-anchor="end">↗</text>
+<g transform="translate(15 17)" fill="none" stroke="{color}" color="{color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</g>
+<text x="45" y="23" font-size="12" font-weight="700"><tspan fill="{MUTED}">$ open </tspan><tspan fill="{INK}">{esc(label)}</tspan></text>
+<text x="45" y="40" font-size="10.5" fill="{color}">{esc(sub)}</text>
+<text x="{w-14}" y="23" font-size="13" fill="{MUTED}" text-anchor="end">↗</text>
 </svg>
 """
 
@@ -294,7 +308,7 @@ def button(label: str, sub: str, color: str) -> str:
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for name, label, sub, color in BUTTONS:
-        (OUT / f"btn-{name}.svg").write_text(button(label, sub, color), encoding="utf-8")
+        (OUT / f"btn-{name}.svg").write_text(button(name, label, sub, color), encoding="utf-8")
     (OUT / "contributions.svg").write_text(contributions(), encoding="utf-8")
     av = avatar()
     (OUT / "avatar.svg").write_text(av, encoding="utf-8")
