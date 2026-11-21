@@ -1,7 +1,20 @@
 <h1 align="center">HELLO WORLD, eu sou o Leonardo 👋</h1>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9EF7,100:6DD5FA&height=180&section=header&text=Seja%20bem-vindo(a)!&fontSize=35&fontColor=ffffff&animation=fadeIn" />
+  <code>leonardo@gelane:~$ python contributions.py</code>
+</p>
+
+<p align="center">
+  <img src="./assets/contributions.svg" alt="Gráfico de contribuições do Leonardo" width="100%" />
+</p>
+
+<p align="center">
+  <code>leonardo@gelane:~$ whoami && curl localhost:8000/api/v1/leonardo</code>
+</p>
+
+<p align="center">
+  <img src="./assets/avatar.svg" alt="Avatar do Leonardo em ASCII" width="49%" />
+  <img src="./assets/api.svg" alt="GET /api/v1/leonardo — resposta JSON com nome, stack e projetos" width="49%" />
 </p>
 
 ---
@@ -57,39 +70,16 @@ Estou buscando minha primeira oportunidade na área de desenvolvimento, com inte
 
 ---
 
-### Projetos em destaque
+### 🗂️ Projetos em destaque
 
-
-#### 🔹 [Empório da Música — AI Assistant](https://github.com/gelane-dev/emporio-da-musica-agent)
-Aplicação full stack com **Python, FastAPI, React e Inteligência Artificial**. Integra a assistente virtual Mel, desenvolvida com arquitetura de agentes e *Function Calling*, capaz de responder dúvidas sobre produtos, consultar informações do catálogo e aplicar regras de negócio. O projeto inclui integração com LLMs, APIs REST, testes automatizados e interface web interativa.
-
-#### 🔹 [E-commerce Full Stack](https://github.com/gelane-dev/ecommerce-fullstack)
-Aplicação em desenvolvimento com **Python, FastAPI, PostgreSQL, SQLAlchemy e React**. O backend inclui autenticação JWT, permissões por perfil, gerenciamento de produtos e pedidos com regras de estoque. O frontend está em fase inicial.
-
-#### 🔹 [FitFlow — Gestão de Treinos](https://github.com/gelane-dev/FitFlow)
-Aplicação de acompanhamento de treinos com **FastAPI, PostgreSQL e React Native (Expo)**, desenvolvida para praticar APIs, persistência de dados e integração com uma interface mobile.
-
-#### 🔹 [projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)
-Sistema de cadastro de clientes desenvolvido com **Python, Flask e SQLite**, em evolução como projeto de prática de CRUD.
-
-#### 🔹 [facial-recognition](https://github.com/gelane-dev/facial-recognition)
-Projeto de reconhecimento facial com **Python, OpenCV, DeepFace e SQLite**, em desenvolvimento.
-
-#### 🔹 [carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)
-Projeto de carrinho de compras criado durante a faculdade de ADS, utilizando **HTML, CSS e JavaScript**.
-
----
-
-### 📊 Estatísticas do GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=gelane-dev&show_icons=true&theme=tokyonight&hide_border=true" width="49%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gelane-dev&layout=compact&theme=tokyonight&hide_border=true" width="35%" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=gelane-dev&theme=tokyonight&hide_border=true" width="60%" />
-</p>
+| Endpoint | Projeto | Stack |
+| --- | --- | --- |
+| `GET /projetos/emporio` | **[Empório da Música — AI Assistant](https://github.com/gelane-dev/emporio-da-musica-agent)**<br>Assistente virtual Mel com arquitetura de agentes e *Function Calling*: responde dúvidas, consulta o catálogo e aplica regras de negócio. | Python · FastAPI · React · LLMs |
+| `GET /projetos/ecommerce` | **[E-commerce Full Stack](https://github.com/gelane-dev/ecommerce-fullstack)**<br>Autenticação JWT, permissões por perfil, produtos e pedidos com regras de estoque. Frontend em fase inicial. | FastAPI · PostgreSQL · SQLAlchemy · React |
+| `GET /projetos/fitflow` | **[FitFlow — Gestão de Treinos](https://github.com/gelane-dev/FitFlow)**<br>Acompanhamento de treinos integrando API, persistência e app mobile. | FastAPI · PostgreSQL · React Native |
+| `GET /projetos/clientes` | **[projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)**<br>CRUD de clientes em evolução. | Flask · SQLite |
+| `GET /projetos/facial` | **[facial-recognition](https://github.com/gelane-dev/facial-recognition)**<br>Reconhecimento facial, em desenvolvimento. | OpenCV · DeepFace · SQLite |
+| `GET /projetos/carrinho` | **[carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)**<br>Projeto da faculdade de ADS. | HTML · CSS · JavaScript |
 
 ---
 
@@ -107,6 +97,4 @@ Projeto de carrinho de compras criado durante a faculdade de ADS, utilizando **H
   </a>
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6DD5FA,100:2E9EF7&height=100&section=footer" />
-</p>
+<sub>Os SVGs deste perfil são gerados por <a href="./scripts/generate.py"><code>scripts/generate.py</code></a> e atualizados todo dia por um GitHub Action.</sub>
