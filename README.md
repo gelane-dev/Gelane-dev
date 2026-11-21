@@ -29,3 +29,14 @@
 | `GET /projetos/clientes` | **[projeto_cadastro_cliente](https://github.com/gelane-dev/projeto_cadastro_cliente)**<br>CRUD de clientes em evolução. | Flask · SQLite |
 | `GET /projetos/facial` | **[facial-recognition](https://github.com/gelane-dev/facial-recognition)**<br>Reconhecimento facial, em desenvolvimento. | OpenCV · DeepFace · SQLite |
 | `GET /projetos/carrinho` | **[carrinho-de-compras](https://github.com/gelane-dev/carrinho-de-compras)**<br>Projeto da faculdade de ADS. | HTML · CSS · JavaScript |
+
+<p align="center">
+  <code>Gelane-Dev@github ~ $ ./links.sh</code>
+</p>
+
+<p align="center">
+  <a href="https://gelane-dev.vercel.app/"><img src="./assets/btn-portfolio.svg" alt="Portfólio" width="24%" /></a>
+  <a href="https://linkedin.com/in/leonardo-gelane-222973258"><img src="./assets/btn-linkedin.svg" alt="LinkedIn" width="24%" /></a>
+  <a href="https://instagram.com/leonardo.gelane"><img src="./assets/btn-instagram.svg" alt="Instagram" width="24%" /></a>
+  <a href="mailto:leonardo.gelane.santos@gmail.com"><img src="./assets/btn-email.svg" alt="Email" width="24%" /></a>
+</p>
