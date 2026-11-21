@@ -2,7 +2,8 @@
 <style>text{font-family:ui-monospace,SFMono-Regular,'JetBrains Mono',Menlo,Consolas,'Liberation Mono',monospace}</style>
 <rect x="0.5" y="0.5" width="199" height="53" rx="9" fill="#0f1828" stroke="#1f2b40"/>
 <rect x="0.5" y="12" width="3" height="30" rx="1.5" fill="#ff8fb1"/>
-<text x="16" y="23" font-size="12.5" font-weight="700"><tspan fill="#6b7a93">$ open </tspan><tspan fill="#e6edf7">instagram</tspan></text>
-<text x="16" y="40" font-size="10.5" fill="#ff8fb1">@leonardo.gelane</text>
-<text x="184" y="23" font-size="13" fill="#6b7a93" text-anchor="end">↗</text>
+<g transform="translate(15 17)" fill="none" stroke="#ff8fb1" color="#ff8fb1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="1.5" width="17" height="17" rx="5"/><circle cx="10" cy="10" r="4"/><circle cx="14.8" cy="5.2" r="1" fill="currentColor" stroke="none"/></g>
+<text x="45" y="23" font-size="12" font-weight="700"><tspan fill="#6b7a93">$ open </tspan><tspan fill="#e6edf7">instagram</tspan></text>
+<text x="45" y="40" font-size="10.5" fill="#ff8fb1">@leonardo.gelane</text>
+<text x="186" y="23" font-size="13" fill="#6b7a93" text-anchor="end">↗</text>
 </svg>
