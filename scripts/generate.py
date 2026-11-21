@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import datetime as dt
 import html
-import base64
 import io
 import os
 import re
@@ -292,21 +291,10 @@ IG_GRADIENT = ('<defs><radialGradient id="ig" cx="30%" cy="107%" r="150%">'
                '<stop offset=".9" stop-color="#285aeb"/></radialGradient></defs>')
 
 
-def icon_svg(name: str, color: str) -> str:
-    """Logo da marca; no portfólio, o avatar em pixel art (assets/eu_2d.png) recortado em círculo."""
-    if name == "portfolio":
-        # recorta só a cabeça (a imagem original tem muito fundo e o pescoço/ombros)
-        face = Image.open(OUT / "eu_2d.png").convert("RGB").crop((14, 6, 82, 74))
-        buf = io.BytesIO()
-        face.save(buf, "PNG", optimize=True)
-        data = base64.b64encode(buf.getvalue()).decode()
-        return (
-            '<defs><clipPath id="me"><circle cx="26" cy="27" r="11"/></clipPath></defs>'
-            f'<circle cx="26" cy="27" r="11.5" fill="#2a2a30"/>'
-            f'<image x="15" y="16" width="22" height="22" clip-path="url(#me)" style="image-rendering:pixelated" '
-            f'href="data:image/png;base64,{data}"/>'
-            f'<circle cx="26" cy="27" r="11.5" fill="none" stroke="{color}" stroke-width="1"/>'
-        )
+def icon_svg(name: str) -> str:
+    """Logo oficial da marca; o botão do portfólio fica sem ícone."""
+    if name not in ICONS:
+        return ""
     fill, d = ICONS[name]
     grad = IG_GRADIENT if name == "instagram" else ""
     return f'{grad}<path transform="translate(14 16) scale(.917)" fill="{fill}" d="{d}"/>'
@@ -314,13 +302,14 @@ def icon_svg(name: str, color: str) -> str:
 
 def button(name: str, label: str, sub: str, color: str) -> str:
     w, h = 200, 54
+    tx = 45 if name in ICONS else 16  # sem ícone, o texto encosta na barra lateral
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">
 <style>text{{font-family:{FONT}}}</style>
 <rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="9" fill="{PANEL}" stroke="{BORDER}"/>
 <rect x="0.5" y="12" width="3" height="{h-24}" rx="1.5" fill="{color}"/>
-{icon_svg(name, color)}
-<text x="45" y="23" font-size="12" font-weight="700"><tspan fill="{MUTED}">$ open </tspan><tspan fill="{INK}">{esc(label)}</tspan></text>
-<text x="45" y="40" font-size="10.5" fill="{color}">{esc(sub)}</text>
+{icon_svg(name)}
+<text x="{tx}" y="23" font-size="12" font-weight="700"><tspan fill="{MUTED}">$ open </tspan><tspan fill="{INK}">{esc(label)}</tspan></text>
+<text x="{tx}" y="40" font-size="10.5" fill="{color}">{esc(sub)}</text>
 <text x="{w-14}" y="23" font-size="13" fill="{MUTED}" text-anchor="end">↗</text>
 </svg>
 """
