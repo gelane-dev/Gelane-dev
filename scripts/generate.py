@@ -268,8 +268,33 @@ def neofetch(height: int) -> str:
     return window(width, height, "Gelane-Dev@github ~ $ neofetch", "".join(parts), style)
 
 
+# ---------------------------------------------------------------- botões de link
+
+BUTTONS = [
+    ("portfolio", "portfólio", "gelane-dev.vercel.app", CYAN),
+    ("linkedin", "linkedin", "in/leonardo-gelane", BLUE),
+    ("instagram", "instagram", "@leonardo.gelane", PINK),
+    ("email", "email", "enviar mensagem", GOLD),
+]
+
+
+def button(label: str, sub: str, color: str) -> str:
+    w, h = 200, 54
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">
+<style>text{{font-family:{FONT}}}</style>
+<rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="9" fill="{PANEL}" stroke="{BORDER}"/>
+<rect x="0.5" y="12" width="3" height="{h-24}" rx="1.5" fill="{color}"/>
+<text x="16" y="23" font-size="12.5" font-weight="700"><tspan fill="{MUTED}">$ open </tspan><tspan fill="{INK}">{esc(label)}</tspan></text>
+<text x="16" y="40" font-size="10.5" fill="{color}">{esc(sub)}</text>
+<text x="{w-16}" y="23" font-size="13" fill="{MUTED}" text-anchor="end">↗</text>
+</svg>
+"""
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
+    for name, label, sub, color in BUTTONS:
+        (OUT / f"btn-{name}.svg").write_text(button(label, sub, color), encoding="utf-8")
     (OUT / "contributions.svg").write_text(contributions(), encoding="utf-8")
     av = avatar()
     (OUT / "avatar.svg").write_text(av, encoding="utf-8")
