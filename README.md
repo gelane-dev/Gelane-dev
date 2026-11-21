@@ -1,7 +1,7 @@
 <h1 align="center">HELLO WORLD, eu sou o Leonardo 👋</h1>
 
 <p align="center">
-  <code>leonardo@gelane:~$ python contributions.py</code>
+  <code>Gelane-Dev@github ~ $ ./contributions.sh</code>
 </p>
 
 <p align="center">
@@ -9,12 +9,12 @@
 </p>
 
 <p align="center">
-  <code>leonardo@gelane:~$ whoami && curl localhost:8000/api/v1/leonardo</code>
+  <code>Gelane-Dev@github ~ $ whoami</code>
 </p>
 
 <p align="center">
   <img src="./assets/avatar.svg" alt="Avatar do Leonardo em ASCII" width="49%" />
-  <img src="./assets/api.svg" alt="GET /api/v1/leonardo — resposta JSON com nome, stack e projetos" width="49%" />
+  <img src="./assets/neofetch.svg" alt="neofetch do Leonardo: formação, stack, destaques e links" width="49%" />
 </p>
 
 ---
