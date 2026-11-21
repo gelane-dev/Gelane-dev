@@ -5,7 +5,7 @@
 Saída em assets/:
   contributions.svg  -> gráfico de contribuições (raspado da página pública)
   avatar.svg         -> avatar convertido em ASCII colorido
-  api.svg            -> "GET /api/v1/leonardo" com resposta JSON
+  neofetch.svg       -> card estilo neofetch com informações do perfil
 
 Dependência: Pillow. Sem token: usa só páginas públicas do GitHub.
 """
@@ -15,6 +15,7 @@ from __future__ import annotations
 import datetime as dt
 import html
 import io
+import os
 import re
 import urllib.request
 from collections import Counter
@@ -121,16 +122,14 @@ def contributions() -> str:
         for i, c in enumerate(LEVELS)
     ) + f'<text x="{legend_x + 40 + 5*(cell+gap)}" y="{ly+9}" font-size="10" fill="{MUTED}">mais</text>'
 
-    best = max(days, key=lambda d: d[2])
     body = (
         "".join(months) + wd + '<g class="cells">' + "".join(rects) + "</g>"
         + f'<text x="{left}" y="{ly+9}" font-size="12" fill="{INK}" font-weight="700">'
-        f'<tspan fill="{CYAN}">{total}</tspan> contribuições no último ano'
-        f'<tspan fill="{MUTED}" font-weight="400">  ·  pico: {best[2]} em {best[0]:%d/%m}</tspan></text>'
+        f'<tspan fill="{CYAN}">{total}</tspan> contribuições no último ano</text>'
         + legend
     )
     style = ".cells rect{opacity:0;animation:in .4s ease-out forwards}"
-    return window(width, height, "leonardo@gelane: ~ $ python contributions.py", body, style)
+    return window(width, height, "Gelane-Dev@github ~ $ ./contributions.sh", body, style)
 
 
 # ---------------------------------------------------------------- avatar ASCII
@@ -186,82 +185,86 @@ def avatar() -> str:
     height = int(oy + rows * lh + 34)
     footer = (
         f'<line x1="0.5" y1="{height-30}" x2="{width-0.5}" y2="{height-30}" stroke="{BORDER}"/>'
-        f'<text x="16" y="{height-11}" font-size="11" fill="{MUTED}">leonardo@gelane: ~ $ '
+        f'<text x="16" y="{height-11}" font-size="11" fill="{MUTED}">Gelane-Dev@github ~ $ '
         f'<tspan fill="{INK}">whoami</tspan>  <tspan fill="{GOLD}">Leonardo Gelane</tspan>'
         f'<tspan class="cursor" fill="{CYAN}"> ▍</tspan></text>'
     )
     style = ".art text{opacity:0;animation:in .3s ease-out forwards}"
     body = '<g class="art">' + "".join(lines) + "</g>" + footer
-    return window(width, height, "leonardo@gelane: ~ $ cat avatar.txt", body, style)
+    return window(width, height, "Gelane-Dev@github ~ $ ./whoami.sh", body, style)
 
 
 # ---------------------------------------------------------------- card API
 
-def api_card(height: int) -> str:
-    K, S, N, P = BLUE, GREEN, GOLD, MUTED  # chave, string, número/bool, pontuação
-    I = "  "
+SERIF = "'EB Garamond',Garamond,Georgia,'Times New Roman',serif"
 
-    def kv(key, val, depth=1, comma=True, vcolor=S):
-        q = '"' if vcolor == S else ""
-        return [(depth, [(f'"{key}"', K), (": ", P), (f"{q}{val}{q}", vcolor), ("," if comma else "", P)])]
+NEOFETCH = [
+    ("rows", [
+        ("Agora", "Dev Full Stack · foco em Backend"),
+        ("Busca", "Estágio em desenvolvimento"),
+        ("Edu", "ADS @ Gran Faculdade ('26 – cursando)"),
+        ("Local", "Rio de Janeiro, RJ"),
+    ]),
+    ("Stack", [
+        ("Backend", "Python, FastAPI, Django, Flask"),
+        ("Dados", "PostgreSQL, SQLite, SQLAlchemy, Alembic"),
+        ("Frontend", "React, React Native (Expo), TypeScript"),
+        ("IA / Visão", "LLMs, Agentes, OpenCV, DeepFace"),
+        ("DevOps", "Docker, Docker Compose, pytest, Git"),
+    ]),
+    ("Destaques", [
+        "5 projetos com APIs REST, JWT e controle de acesso",
+        "FitFlow — projeto solo com 136 commits",
+        "Mel — assistente com IA e function calling",
+        "Ex-soldado do Exército Brasileiro (logística)",
+    ]),
+    ("Links", [
+        ("GitHub", "gelane-dev"),
+        ("LinkedIn", "in/leonardo-gelane-222973258"),
+        ("Instagram", "leonardo.gelane"),
+    ] + ([("Email", os.environ["PROFILE_EMAIL"])] if os.environ.get("PROFILE_EMAIL") else [])),
+]
 
-    def arr(key, items, depth=1, comma=True):
-        out = [(depth, [(f'"{key}"', K), (": [", P)])]
-        for i, it in enumerate(items):
-            out.append((depth + 1, [(f'"{it}"', S), ("," if i < len(items) - 1 else "", P)]))
-        out.append((depth, [("]" + ("," if comma else ""), P)]))
-        return out
 
-    def obj(key, depth=1):
-        return [(depth, [(f'"{key}"', K), (": {", P)])]
+def neofetch(height: int) -> str:
+    width, x0, xv = 420, 22, 118
+    lh, fs = 17.5, 12
+    parts, i = [], 0
+    y = 58
 
-    def close(depth, comma=True):
-        return [(depth, [("}" + ("," if comma else ""), P)])]
-
-    body_lines = (
-        [(0, [("{", P)])]
-        + kv("nome", "Leonardo Gelane")
-        + kv("formacao", "Análise e Desenv. de Sistemas")
-        + kv("foco", "backend · full stack")
-        + kv("open_to_work", "true", vcolor=N)
-        + obj("stack")
-        + kv("backend", "Python · FastAPI · Flask · Django", 2)
-        + kv("dados", "PostgreSQL · SQLite · SQLAlchemy", 2)
-        + kv("ia", "LLMs · agentes · function calling", 2)
-        + kv("front", "React · React Native · Expo", 2)
-        + kv("devops", "Docker · Git · GitHub Actions", 2, comma=False)
-        + close(1)
-        + arr("projetos", ["emporio-da-musica-agent", "ecommerce-fullstack", "FitFlow"])
-        + kv("agora", "construindo a Mel, assistente com IA")
-        + kv("lema", "aprender construindo", comma=False)
-        + close(0, comma=False)
-    )
-
-    width, x0, lh = 420, 18, 15.2
-    y = 52
-    parts = [
-        f'<text x="{x0}" y="{y}" font-size="11.5"><tspan fill="{PINK}" font-weight="700">GET</tspan>'
-        f'<tspan fill="{INK}"> /api/v1/leonardo</tspan></text>',
-        f'<text x="{x0}" y="{y+20}" font-size="11"><tspan fill="{MUTED}">HTTP/1.1 </tspan>'
-        f'<tspan fill="{GREEN}" font-weight="700">200 OK</tspan>'
-        f'<tspan fill="{MUTED}">  ·  application/json  ·  12ms</tspan></text>',
-        f'<line x1="{x0}" y1="{y+32}" x2="{width-x0}" y2="{y+32}" stroke="{BORDER}" stroke-dasharray="3 3"/>',
-    ]
-    y += 54
-    for i, (depth, toks) in enumerate(body_lines):
-        spans = "".join(f'<tspan fill="{c}">{esc(t)}</tspan>' for t, c in toks if t)
+    def line(content: str) -> None:
+        nonlocal i
         parts.append(
-            f'<text class="ln" x="{x0}" y="{y + i*lh:.1f}" font-size="11" xml:space="preserve" '
-            f'style="animation-delay:{0.3 + i*0.06:.2f}s">{I*depth}{spans}</text>'
+            f'<text class="ln" x="{x0}" y="{y:.1f}" font-size="{fs}" '
+            f'style="animation-delay:{0.2 + i*0.05:.2f}s">{content}</text>'
         )
-    foot_y = height - 11
-    parts.append(f'<line x1="0.5" y1="{height-30}" x2="{width-0.5}" y2="{height-30}" stroke="{BORDER}"/>')
-    parts.append(
-        f'<text x="16" y="{foot_y}" font-size="11" fill="{MUTED}">INFO: '
-        f'<tspan fill="{GREEN}">Application startup complete.</tspan></text>'
-    )
-    style = ".ln{opacity:0;animation:in .25s ease-out forwards}"
-    return window(width, height, "leonardo@gelane: ~ $ curl localhost:8000/api", "".join(parts), style)
+        i += 1
+
+    line(f'<tspan fill="{CYAN}" font-weight="700">gelane</tspan>'
+         f'<tspan fill="{INK}" font-weight="700">@github</tspan>')
+    parts.append(f'<line x1="{x0}" y1="{y+7}" x2="{x0+92}" y2="{y+7}" stroke="{BORDER}"/>')
+    y += lh + 4
+
+    for title, items in NEOFETCH:
+        if title != "rows":
+            y += 8
+            line(f'<tspan fill="{GREEN}" font-weight="700">— {esc(title)}</tspan>')
+            parts.append(f'<line x1="{x0}" y1="{y+6}" x2="{width-x0}" y2="{y+6}" stroke="{BORDER}"/>')
+            y += lh + 2
+        for it in items:
+            if isinstance(it, tuple):
+                k, v = it
+                parts.append(
+                    f'<text class="ln" x="{xv}" y="{y:.1f}" font-size="{fs}" fill="#aab6c8" '
+                    f'style="animation-delay:{0.2 + i*0.05:.2f}s">{esc(v)}</text>'
+                )
+                line(f'<tspan fill="{INK}" font-weight="700">{esc(k)}</tspan>')
+            else:
+                line(f'<tspan fill="{GREEN}">•</tspan><tspan fill="#aab6c8">  {esc(it)}</tspan>')
+            y += lh
+
+    style = f".ln{{font-family:{SERIF};opacity:0;animation:in .25s ease-out forwards}}"
+    return window(width, height, "Gelane-Dev@github ~ $ neofetch", "".join(parts), style)
 
 
 def main() -> None:
@@ -270,7 +273,7 @@ def main() -> None:
     av = avatar()
     (OUT / "avatar.svg").write_text(av, encoding="utf-8")
     h = int(re.search(r'height="(\d+)"', av).group(1))
-    (OUT / "api.svg").write_text(api_card(h), encoding="utf-8")
+    (OUT / "neofetch.svg").write_text(neofetch(h), encoding="utf-8")
     print("ok:", ", ".join(p.name for p in OUT.glob("*.svg")))
 
 
